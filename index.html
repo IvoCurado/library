@@ -6,6 +6,31 @@
     <title>Library</title>
   </head>
   <body>
-    oi
+    <div class="top-zone">
+      <p>My Library</p>
+      <button id="show-add-book-form">New Book</button>
+    </div>
+    <div id="my-library"></div>
+    <dialog id="form-dialog" closedby="any">
+      <form id="new-book-form" action="#" method="dialog">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" required />
+        </div>
+        <div>
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" name="pages" required />
+        </div>
+        <div>
+          <label for="read">Read</label>
+          <input type="checkbox" id="read" name="read" />
+        </div>
+        <button id="add-book" type="submit">Add book</button>
+      </form>
+    </dialog>
   </body>
 </html>

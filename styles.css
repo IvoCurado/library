@@ -7,3 +7,65 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+:root {
+  --main-color: #7c2e00;
+  --main-color-lighter: #dd5100;
+  --main-color-darker: #421800;
+}
+
+.top-zone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#my-library {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  .book-card {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 20px;
+  }
+
+  .actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+button {
+  padding: 5px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--main-color-lighter);
+  }
+
+  &:active {
+    background-color: var(--main-color-darker);
+  }
+}
+
+dialog {
+  #new-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  border: none;
+  border-radius: 4px;
+}
