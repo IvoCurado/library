@@ -35,20 +35,42 @@ addBookButton.addEventListener("click", (event) => {
   }
 });
 
-function Book(title, author, pages, read) {
-  this.id = crypto.randomUUID();
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function () {
-    return `${this.title} by ${this.author}, ${pages} pages, ${
+// FUNCTION CONSTRUCTOR WAY
+// function Book(title, author, pages, read) {
+//   this.id = crypto.randomUUID();
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+//   this.info = function () {
+//     return `${this.title} by ${this.author}, ${pages} pages, ${
+//       this.read ? "already read" : "not read yet"
+//     }.`;
+//   };
+//   this.updateReadStatus = function () {
+//     this.read = !this.read;
+//   };
+// }
+
+// CLASSES WAY
+class Book {
+  constructor(title, author, pages, read) {
+    this.id = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${
       this.read ? "already read" : "not read yet"
     }.`;
-  };
-  this.updateReadStatus = function () {
+  }
+
+  updateReadStatus() {
     this.read = !this.read;
-  };
+  }
 }
 
 function addBookToLibrary(title, author, pages, read) {
